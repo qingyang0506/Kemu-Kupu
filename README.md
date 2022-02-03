@@ -28,7 +28,7 @@ apt install openjfx
 
 Download the project and direct to following directory 
 ```
-/home/student/javafx-sdk-11.0.2/javafx
+/home/student/Kemu-Kupu
 ```
 Then ensure that `run.sh` is given executable permissions for the current user 
 ```
