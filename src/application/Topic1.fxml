@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyPressed" prefHeight="572.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NewQuizController">
+   <children>
+      <ImageView fitHeight="592.0" fitWidth="818.0" layoutY="-7.0" preserveRatio="true" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="58.0" AnchorPane.topAnchor="-7.0">
+         <image>
+            <Image url="@../resource/quiz_mod.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="67.0" layoutX="375.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/clockoutside.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="myInner" fitHeight="61.0" fitWidth="62.0" layoutX="377.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true" rotate="45.5">
+         <image>
+            <Image url="@../resource/innercircle.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userInput" alignment="CENTER" layoutX="195.0" layoutY="322.0" prefHeight="55.0" prefWidth="320.0" style="-fx-background-color: #8fbae1;">
+         <font>
+            <Font size="22.0" />
+         </font></TextField>
+      <Label fx:id="topicTitle" alignment="CENTER" layoutX="182.0" layoutY="154.0" prefHeight="23.0" prefWidth="454.0" text="Topic 1 Quiz" textAlignment="CENTER">
+         <font>
+            <Font name="Arimo Bold" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="start" layoutX="182.0" layoutY="110.0" mnemonicParsing="false" onAction="#checkStart" prefHeight="23.0" prefWidth="136.0" style="-fx-background-color: #ffde59;" text="Start">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Button>
+      <Label fx:id="message" alignment="CENTER" layoutX="258.0" layoutY="394.0" prefHeight="53.0" prefWidth="355.0" style="-fx-background-color: #F0F8FF;">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font></Label>
+      <Label fx:id="hint" alignment="CENTER" layoutX="194.0" layoutY="227.0" prefHeight="80.0" prefWidth="427.0" style="-fx-background-color: #F0F8FF;" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Arimo Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="score" alignment="CENTER" layoutX="502.0" layoutY="110.0" prefHeight="33.0" prefWidth="136.0" style="-fx-background-color: #ffde59;" text="Score:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Score" />
+         </tooltip></Label>
+      <Slider fx:id="slider" layoutX="100.0" layoutY="138.0" majorTickUnit="10.0" minorTickCount="1" orientation="VERTICAL" prefHeight="250.0" prefWidth="40.0" showTickMarks="true" snapToTicks="true" style="-fx-control-inner-background: #ffde59;" value="50.0">
+         <tooltip>
+            <Tooltip text="Adjust how fast words are spoken." />
+         </tooltip></Slider>
+      <Button fx:id="submit" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="495.0" layoutY="314.0" mnemonicParsing="false" onAction="#submit" prefHeight="72.0" prefWidth="79.0" style="-fx-background-radius: 50%; -fx-background-color: #edf6ff;">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView blendMode="SRC_ATOP" fitHeight="57.0" fitWidth="59.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/check_button.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="skip" layoutX="562.0" layoutY="318.0" mnemonicParsing="false" onAction="#skipWord" prefHeight="57.0" prefWidth="73.0" style="-fx-background-color: #edf6ff; -fx-background-radius: 50%;">
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+         <tooltip>
+            <Tooltip text="Skip word." />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="59.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/IMG_1377.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="playBack" layoutX="85.0" layoutY="405.0" mnemonicParsing="false" onAction="#sayWordAgain" prefHeight="57.0" prefWidth="67.0" style="-fx-background-color: #5DA1DF; -fx-background-radius: 50%;" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="85.0">
+         <tooltip>
+            <Tooltip text="Playback word." />
+         </tooltip>
+         <graphic>
+            <ImageView fitHeight="54.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/playback.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="myMacronI" disable="true" layoutX="194.0" layoutY="403.0" mnemonicParsing="false" onAction="#addMacronI" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #ffde59;" text="ī">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="myMacronO" disable="true" layoutX="194.0" layoutY="403.0" mnemonicParsing="false" onAction="#addMacronO" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #ffde59;" text="ō">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="myMacronE" disable="true" layoutX="194.0" layoutY="402.0" mnemonicParsing="false" onAction="#addMacronE" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #ffde59;" text="ē">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="myMacronU" disable="true" layoutX="194.0" layoutY="402.0" mnemonicParsing="false" onAction="#addMacronU" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #ffde59;" text="ū">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="macronButton" layoutX="194.0" layoutY="402.0" mnemonicParsing="false" onAction="#macronEnable" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: #ffde59;" text="ā">
+         <tooltip>
+            <Tooltip text="Show Macrons" />
+         </tooltip>
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Button>
+      <Label fx:id="defaultSpeed" layoutX="100.0" layoutY="101.0" text="1.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Label>
+      <Button layoutX="731.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Help" style="-fx-background-color: #5da1df;">
+         <graphic>
+            <ImageView fitHeight="55.0" fitWidth="55.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/image%20copy%202.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#mainMenu" style="-fx-background-color: #5da1df;">
+         <graphic>
+            <ImageView fitHeight="61.0" fitWidth="61.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/return2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

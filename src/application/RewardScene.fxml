@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RewardController">
+   <children>
+      <ImageView fitHeight="606.0" fitWidth="818.0" preserveRatio="true">
+         <image>
+            <Image url="@../resource/rewardsFixed.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="76.0" layoutY="210.0" opacity="0.3" prefHeight="319.0" prefWidth="210.0" text="Label" />
+      <Label fx:id="scoreLabel" alignment="CENTER" layoutX="351.0" layoutY="250.0" prefHeight="65.0" prefWidth="340.0" style="-fx-background-color: #5DA1DF;" textFill="#050b1b">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="playAgain" layoutX="351.0" layoutY="464.0" mnemonicParsing="false" onAction="#playAgain" prefHeight="43.0" prefWidth="164.0" style="-fx-background-color: #5DA1DF;" text="Play again?" textFill="#0d0101">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Button>
+      <Label layoutX="355.0" layoutY="367.0" text="Enter name:">
+         <font>
+            <Font name="Arimo Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userName" layoutX="462.0" layoutY="366.0" prefHeight="31.0" prefWidth="170.0" />
+      <Label layoutX="66.0" layoutY="218.0" opacity="0.57" prefHeight="297.0" prefWidth="230.0" style="-fx-background-color: #5DA1DF;" />
+      <Button fx:id="enter" layoutX="641.0" layoutY="366.0" mnemonicParsing="false" onAction="#EnterName" prefHeight="31.0" prefWidth="50.0" style="-fx-background-color: #5DA1DF;" text="Enter">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="word1" layoutX="76.0" layoutY="262.0" text="word1: ">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font></Label>
+      <Label fx:id="word2" layoutX="76.0" layoutY="313.0" text="word2: ">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font></Label>
+      <Label fx:id="word3" layoutX="76.0" layoutY="367.0" text="word3: ">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font></Label>
+      <Label fx:id="word4" layoutX="76.0" layoutY="414.0" text="word4: ">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font></Label>
+      <Label fx:id="word5" layoutX="76.0" layoutY="464.0" text="word5: ">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font></Label>
+      <Button layoutX="527.0" layoutY="463.0" mnemonicParsing="false" onMouseClicked="#animation" prefHeight="42.0" prefWidth="164.0" style="-fx-background-color: #5DA1DF;" text="Your reward!">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></Button>
+      <Label layoutX="450.0" layoutY="195.0" text="Your score" textAlignment="CENTER">
+         <font>
+            <Font name="Arimo Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label layoutX="135.0" layoutY="226.0" text="Summary" textAlignment="CENTER">
+         <font>
+            <Font name="Arimo Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="correct1" layoutX="224.0" layoutY="262.0" text="correct?">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="correct2" layoutX="224.0" layoutY="313.0" text="correct?">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="correct3" layoutX="224.0" layoutY="368.0" text="correct?">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="correct4" layoutX="224.0" layoutY="414.0" text="correct?">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="correct5" layoutX="224.0" layoutY="464.0" text="correct?">
+         <font>
+            <Font name="Arimo" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

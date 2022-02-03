@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LeaderBoardController">
+   <children>
+      <ImageView fitHeight="580.0" fitWidth="843.0" preserveRatio="true">
+         <image>
+            <Image url="@../resource/leaderboard.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="RankLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="96.0" layoutY="163.0" prefHeight="355.0" prefWidth="630.0" text="Label">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="333.0" layoutY="534.0" mnemonicParsing="false" onAction="#returnMain" prefHeight="46.0" prefWidth="48.0" style="-fx-background-color: #5da1df;">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="38.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/return2.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Label layoutX="389.0" layoutY="547.0" text="Main menu">
+         <font>
+            <Font name="Arimo Bold" size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

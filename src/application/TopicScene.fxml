@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="818.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.TopicSceneController">
+   <children>
+      <ImageView fitHeight="583.0" fitWidth="825.0" layoutX="-1.0" preserveRatio="true">
+         <image>
+            <Image url="@../resource/choose_topic.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="543.0" layoutY="274.0" mnemonicParsing="false" onAction="#switchToTopic1" prefHeight="57.0" prefWidth="62.0" style="-fx-background-color: #edf6ff; -fx-background-radius: 2em;" textAlignment="CENTER" AnchorPane.leftAnchor="543.0" AnchorPane.rightAnchor="213.0">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="45.0" fitWidth="42.0">
+               <image>
+                  <Image url="@../resource/topic_select.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ChoiceBox fx:id="myChoiceBox" layoutX="235.0" layoutY="283.0" prefHeight="39.0" prefWidth="308.0" style="-fx-background-color: #5DA1DF; -fx-font-size: 17px; -fx-font-weight: 100;" />
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="173.0" layoutY="402.0" mnemonicParsing="false" onAction="#switchToMain" prefHeight="39.0" prefWidth="56.0" style="-fx-background-color: #edf6ff;" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="52.0" fitWidth="100.0" preserveRatio="true">
+               <image>
+                  <Image url="@../resource/return2.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="243.0" layoutY="415.0" prefHeight="39.0" prefWidth="78.0" text="Back to main menu" wrapText="true">
+         <font>
+            <Font name="Arimo Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
